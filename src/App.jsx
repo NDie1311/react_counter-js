@@ -13,10 +13,10 @@ export const App = () => {
 
   const increase = () => {
     setCount(prev => {
-      const shouldAdd100 = prev % 5 === 0;
-      const newCount = prev + 1;
+      const newCount = prev + 1; // First add 1
+      const shouldAdd100 = newCount % 5 === 0; // Check if updated count is divisible by 5
 
-      return shouldAdd100 ? newCount + 100 : newCount;
+      return shouldAdd100 ? newCount + 100 : newCount; // Add 100 if divisible by 5, otherwise just return the incremented value
     });
   };
 
