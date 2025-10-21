@@ -13,9 +13,10 @@ export const App = () => {
 
   const increase = () => {
     setCount(prev => {
-      const shouldAdd100 = prev % 5 === 0; // Check original value
+      const newCount = prev + 1; // Compute incremented value first
+      const shouldAdd100 = newCount % 5 === 0; // Check divisibility on incremented value
 
-      return shouldAdd100 ? prev + 101 : prev + 1; // Add 100 + 1 or just 1
+      return shouldAdd100 ? newCount + 100 : newCount; // Add 100 to incremented value or just return incremented value
     });
   };
 
